@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/1c2ae4d7-0a5b-4086-8368-f1c6dd7bcafa/resourceGroups/website-resource-group/providers/Microsoft.Web/sites/symsarchive",
+    "appService.deploySubpath": "."
+}
