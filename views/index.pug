@@ -1,6 +1,18 @@
 extends layout
 
 block content
+  .header
+    .menu.pure-menu.pure-menu-horizontal.pure-menu-fixed
+      a.pure-menu-heading(href="#") TEST 
+
+      ul.pure-menu-list 
+        li.pure-menu-item
+          a.pure-menu-link(href="#") Test 1
+        li.pure-menu-item 
+          a.pure-menu-link(href="#") Test 2
+        li.pure-menu-item 
+          a.pure-menu-link(href="#") Test 3
+
   div.main-window
-    h1= title
+    h1.title Sym's Archive
     p Time to add content

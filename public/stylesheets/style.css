@@ -1,15 +1,78 @@
-body {
+
+/* Variables */
+
+:root
+{
+  --header-background-color: #2e2e2e91;
+  --main-background-color: #181a1b;
+
+}
+
+/* Dark mode stuff */
+html, body, input, textarea, select, button 
+{
+  color: #e8e6e3;
+}
+
+
+body 
+{
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Monteserrat', sans-serif;
+  font-size: 16px ;
+  background-color: var(--main-background-color);
+
 }
 
-a {
-  color: #00B7FF;
+
+
+
+.main-window 
+{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+
 }
 
-.main-window p, .main-window h1{
+.title
+{
+  font-family: 'Xanh Mono', monospace;
+  font-size: 40px;
+}
+
+.main-window p, .main-window h1
+{
   margin: auto;
   padding: 10px;
   text-align: center;
 
 }
+
+
+.menu
+{
+  padding: 0.5em;
+  text-align: left;
+  box-shadow: 0 1px 1px rgba(0,0,0, 0.1);
+  background-color: var(--header-background-color);
+}
+
+.menu ul
+{
+  float: right;
+}
+
+.pure-menu-link
+{
+  color: #e8e6e3;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    background: none;
+    border: none;
+    color: #AECFE5;
+}
+
