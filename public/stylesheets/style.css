@@ -5,13 +5,14 @@
 {
   --header-background-color: #2e2e2e91;
   --main-background-color: #181a1b;
+  --text-color: #e8e6e3;
 
 }
 
 /* Dark mode stuff */
 html, body, input, textarea, select, button 
 {
-  color: #e8e6e3;
+  color: var(--text-color);
 }
 
 
