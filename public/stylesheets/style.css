@@ -3,10 +3,32 @@
 
 :root
 {
-  --header-background-color: #2e2e2e91;
+  /*--header-background-color: #2e2e2e91;
   --main-background-color: #181a1b;
-  --text-color: #e8e6e3;
+  --text-color: #e8e6e3;*/
 
+
+  /* winter 1*/
+  /*--header-background-color: #1f6f8b;
+  --main-background-color: #1c2b2d;
+  --text-color: #e6d5b8;
+  --menu-text-color: #e6d5b8;
+  --menu-text-highlight-color: #99a8b2;*/
+
+  --header-background-color: #857F74;
+  --secondary-header-background-color: #857F74;
+  --divider-color: #851E76;
+
+  --main-background-color: #191716;
+  
+
+  --text-color: #F1FAEE;
+  --menu-text-color: #F1FAEE;
+  --header-color: #F1FAEE;
+
+  --menu-text-highlight-color: #004643;
+
+  --homepage-link-text-color: #851E76;
 }
 
 /* Dark mode stuff */
@@ -18,7 +40,6 @@ html, body, input, textarea, select, button
 
 body 
 {
-  padding: 50px;
   font-family: 'Monteserrat', sans-serif;
   font-size: 16px ;
   background-color: var(--main-background-color);
@@ -46,11 +67,16 @@ body
 .main-window p, .main-window h1
 {
   margin: auto;
-  padding: 10px;
+  padding: 0.3em;
   text-align: center;
 
 }
 
+.pure-menu-heading
+{
+  color: var(--menu-text-color);
+  padding: 0.1em 0 0 0.5em;
+}
 
 .menu
 {
@@ -58,6 +84,7 @@ body
   text-align: left;
   box-shadow: 0 1px 1px rgba(0,0,0, 0.1);
   background-color: var(--header-background-color);
+  color: var(--menu-text-color);
 }
 
 .menu ul
@@ -67,13 +94,24 @@ body
 
 .pure-menu-link
 {
-  color: #e8e6e3;
+  color: var(--menu-text-color);
 }
 
 .menu li a:hover,
 .menu li a:focus {
     background: none;
     border: none;
-    color: #AECFE5;
+    color: var(--menu-text-highlight-color);
 }
 
+#socials
+{
+  text-align: center;
+  padding-top: 0.5em;
+}
+
+#socials svg 
+{
+  padding: 0 0.5em;
+
+}

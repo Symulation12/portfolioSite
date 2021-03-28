@@ -1,8 +1,20 @@
 :root
 {
-  --header-background-color: #2e2e2e91;
-  --main-background-color: #181a1b;
-  --text-color: #e8e6e3;
+
+    --header-background-color: #857F74;
+    --secondary-header-background-color: #857F74;
+    --divider-color: #851E76;
+
+    --main-background-color: #191716;
+    
+
+    --text-color: #F1FAEE;
+    --menu-text-color: #F1FAEE;
+    --header-color: #F1FAEE;
+
+    --menu-text-highlight-color: #004643;
+
+    --homepage-link-text-color: #851E76;
 
 }
 
@@ -59,7 +71,7 @@ The content `<div>` is where all your content goes.
 
 .header {
      margin: 0;
-     color: rgb(129, 127, 127);
+     color: var(--header-color);
      text-align: center;
      padding: 2.5em 2em 0;
      border-bottom: 1px solid #eee;
@@ -73,7 +85,7 @@ The content `<div>` is where all your content goes.
     }
      .header h2 {
         font-weight: 300;
-        color: #ccc;
+        color: var(--header-color);
         padding: 0;
         margin-top: 0;
     }
@@ -81,7 +93,7 @@ The content `<div>` is where all your content goes.
 .content-subhead {
     margin: 50px 0 20px 0;
     font-weight: 300;
-    color: rgb(129, 127, 127);
+    color: var(--text-color);
 }
 
 
@@ -106,7 +118,7 @@ appears on the left side of the page.
     All anchors inside the menu should be styled like this.
     */
     #menu a {
-        color: #999;
+        color: var(--menu-text-color);
         border: none;
         padding: 0.6em 0 0.6em 0.6em;
     }
@@ -126,14 +138,14 @@ appears on the left side of the page.
     */
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid #333;
+        border-top: 1px solid var(--divider-color);
     }
         /*
         Change color of the anchor links on hover/focus.
         */
         #menu .pure-menu li a:hover,
         #menu .pure-menu li a:focus {
-            background: #333;
+            background: var(--menu-text-highlight-color);
         }
 
     /*
@@ -141,14 +153,14 @@ appears on the left side of the page.
     */
     #menu .pure-menu-selected,
     #menu .pure-menu-heading {
-        background: #1e2325;
+        background: var(--secondary-header-background-color);
         font-family: 'Xanh Mono', monospace;
     }
         /*
         This styles a link within a selected menu item `<li>`.
         */
         #menu .pure-menu-selected a {
-            color: #fff;
+            color: var(--text-color);
         }
 
     /*
@@ -156,7 +168,7 @@ appears on the left side of the page.
     */
     #menu .pure-menu-heading {
         font-size: 100%;
-        color: #fff;
+        color: var(--homepage-link-text-color);
         margin: 0;
         
     }

@@ -6,10 +6,18 @@ router.get('/', function(req, res) {
   res.render('index', {title: "Sym's Archive"});
 });
 
-router.get('/projects/*', function(req, res) {
+router.get('/projects/*', function(req, res, next) {
   var project = req.originalUrl.split('/').slice(-1).pop();
-  res.render(`projects/${project}`, {title: project});
-  
+  var path = `projects/${project}`;
+  res.render(path, {title: project}, function(err, html)
+  {
+    if(err)
+    {
+      next();
+      return;
+    }
+    res.send(html);
+  });
 });
 
 module.exports = router;

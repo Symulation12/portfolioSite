@@ -23,10 +23,22 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  //Exclude favicon request
-  if(req.originalUrl != "/favicon.ico")
-  next(createError(404));
+app.use(function(req, res) {
+
+  if(req.originalUrl === "/favicon.ico")
+    res.status(404);
+  if(req.accepts('html'))
+  {
+    res.render('404', {url: req.url});
+    return;
+  }
+  if(req.accepts('json'))
+  {
+    res.json({error: 'Not found'});
+    return;
+  }
+  res.type('txt').send('Not found');
+  
 });
 
 // error handler
