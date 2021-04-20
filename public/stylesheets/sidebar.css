@@ -155,6 +155,15 @@ appears on the left side of the page.
     #menu .pure-menu-heading {
         background: var(--secondary-header-background-color);
         font-family: 'Xanh Mono', monospace;
+        border-bottom: 1px solid var(--divider-color);
+    }
+
+    #menu .menu-selected
+    {
+        border-bottom: 1px solid var(--divider-color);
+        position: absolute;
+        left: 5%;
+        width: 80%;
     }
         /*
         This styles a link within a selected menu item `<li>`.

@@ -24,15 +24,16 @@ html
                 .pure-menu 
                     a.pure-menu-heading(href="/") Sym's Archive
 
-                    ul.pure-menu-list 
-                        li.pure-menu-item
-                            a.pure-menu-link(href="/projects/about") About 
-                        li.pure-menu-item.menu-item-divided.pure-menu-selected 
-                            a.pure-menu-link(href="/projects/home") Projects
-                        li.pure-menu-item 
-                            a.pure-menu-link(href="/projects/CSharp") C#
-                        li.pure-menu-item 
-                            a.pure-menu-link(href="/projects/CSharp") Lua
+                    block sidebar
+                        ul.pure-menu-list 
+                            li.pure-menu-item
+                                a.pure-menu-link(href="/projects/about") About me
+                            li.pure-menu-item 
+                                a.pure-menu-link(href="/projects/CSharp") C#
+                            li.pure-menu-item 
+                                a.pure-menu-link(href="/projects/lua") Lua
+                            li.pure-menu-item 
+                                a.pure-menu-link(href="/projects/python") Python
             #main
                 block projectContent
                     .header 
