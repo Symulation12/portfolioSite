@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        title= title
+
+        //Pure css setup
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous")
+
+        //Google api fonts
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Xanh+Mono&display=swap" )
+
+        block stylesheets 
+            link(rel="stylesheet" href="/stylesheets/sidebar.css")
+            script(src="/javascripts/sidebar-ui.js")
+.header 
+    h1 Infobox
+    h2 Lots of neat info in this box
+.content 
+    h2.content-subhead FFLOGS filters
+    p Shield is wasted (Can replace galvanize with other shield names)
+    code ability.name in ("Galvanize", "Catalyze", "Seraphic Veil") and inCategory("Healing") = false and type = "removebuff" and target.type != "pet"
+    |
+    p Enemy casts (Set to decorator):
+    code source.disposition = "Enemy" and type="cast"
+    |
+    p Filter out offensive tank abilities:
+    code source.role = "Tank" and ability.name not in ("Holy Spirit","Shield Lob","Heavy Swing","Infuriate","Fast Blade","Maim","Fight Or Flight","Circle Of Scorn","Spirits Within","Storm's Eye","Riot Blade","Fell Cleave","Goring Blade","Onslaught","Upheaval","Royal Authority","Shield Swipe","Storm's Path","Requiescat", "Savage Blade","Rage of Halone","Attack","Tomahawk","Skull Sunder","Butcher's Block","Salted Earth","Hard Slash","Carve And Spit","Syphon Strike","Dark Arts","Blood Weapon","Delirium","Souleater","Bloodspiller","Plunge", "Intervene", "Atonement", "Holy Circle", "Confiteor", "Flood of Shadow", "Edge of Shadow", "Living Shadow", "Stalwart Soul", "Keen Edge", "No Mercy", "Demon Slice","Lightning Shot", "Brutal Shell", "Danger Zone", "Solid Barrel",  "Sonic Break", "Rough Divide", "Gnashing Fang", "Savage Claw", "Wicked Talon", "Bow Shock", "Continuation", "Fated Circle", "Bloodfest", "Blasting Zone",  "Jugular Rip", "Abdomen Tear", "Eye Gouge", "Burst Strike") and type = "cast"
+    |
+    p Filter out offensive/non-heal healer abilities:
