@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
+const CryptoJS = require('crypto-js');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -32,6 +33,16 @@ router.get('/projects/*', function(req, res, next) {
     }
     res.send(html);
   });
+});
+
+router.post('/encrypt', (req, res) => {
+  const encrypted = CryptoJS.AES.encrypt(req.body['data'], req.body['key']);
+  res.json({'data' : encrypted.toString()});
+});
+
+router.post('/decrypt', (req, res) => {
+  const bytes = CryptoJS.AES.decrypt(req.body['data'], req.body['key']);
+  res.json({'data' : bytes.toString(CryptoJS.enc.Utf8)});
 });
 
 module.exports = router;
